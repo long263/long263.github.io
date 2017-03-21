@@ -74,7 +74,7 @@ canvas {
 
 .skillModal-content {
     position: relative;
-    background:url("./sprite/scroll.png");
+    background:url("./sprite/modalscroll.png");
     background-size:     contain;
     background-repeat:   no-repeat;
     background-position: center;

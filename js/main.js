@@ -3,6 +3,7 @@ var canvas = document.getElementsByTagName( 'canvas' )[ 0 ];
 var ctx = canvas.getContext("2d");
 var tile = 32;
 var COLS = canvas.width/tile, ROWS = canvas.height/tile;
+var dir = 0; // 0 still, 1 up, 2 right, 3 down, 4 left
 var items = [
   [1, 2],
   [3, 4],
@@ -41,13 +42,13 @@ var board = [
 var currentX, currentY; // position of actor
 
 function clearOldFrame() {
-    ctx.clearRect(currentX*tile,currentY*tile,actorWidth,actorHeight);
+    ctx.clearRect(currentX,currentY,actorWidth,actorHeight);
 }
 
 function createChar() {
     // initiate position at pixel
-    currentX = 9;
-    currentY = 10;
+    currentX = 9*tile;
+    currentY = 10*tile;
 }
 
 // clears the board
@@ -56,80 +57,79 @@ function init() {
 
 //listener
 function keyPress( key ) {
-
-    //console.log(currentY);
-    //console.log(board[currentY][currentX]);
+    var temp;
     switch ( key ) {
-        case 'left':
-            if (checkCollision(-1,0)) {
-                clearOldFrame();
-                --currentX;
-            }
+        case 'up':
+            dir = 1;
             break;
         case 'right':
-            if (checkCollision(1,0)) {
-                clearOldFrame();
-                ++currentX;
-            }
+            dir = 2;
             break;
         case 'down':
-            if (checkCollision(0, 1)) {
-                clearOldFrame();
-                ++currentY;
-            }
+            dir = 3;
             break;
-        case 'up':
-            if (checkCollision(0,-1)) {
-                clearOldFrame();
-                --currentY;
-            }
-            break;
+        case 'left':
+            dir = 4;
+            break;    
     }
 }
+
+function keyRelease(key) {
+    dir = 0;
+}
+
 
 // checks if the resulting position of current shape will be feasible
 function checkCollision(offsetX, offsetY) {
+    if (offsetX ===0) { //that means move Y axis
+        var newLocY= offsetY >=0 ? Math.floor(currentY/tile) + 1
+                                 : Math.floor((currentY+offsetY)/tile);
+        //boundary check (DONE)
+        if (newLocY < 0 || newLocY >= ROWS) {
+            return 0;
+        }
+        //"true" collision check
+        if (board[newLocY][Math.floor(currentX/tile)] === 1 ||
+            board[newLocY][Math.ceil(currentX/tile)] === 1 ) {
+            return 0;
+        }
+        return offsetY;     
+        // if (board[currentY + offsetY][currentX+offsetX] === 6) {
+        //     skillModal.style.display = "block";
+        // }
 
-    //boundary check (DONE)
-    if (currentX + offsetX<0    ||
-        currentX + offsetX>=COLS ||
-        currentY + offsetY<0    ||
-        currentY + offsetY>=ROWS) {
-        return false;
+        // if (currentX + offsetX === 29 &&
+        //     currentY + offsetY === 17) {
+        //     projectModal.style.display = "block";
+        // }
     }
-    if (board[currentY + offsetY][currentX+offsetX] === 1) {
-        console.log("collision");
-        return false;
+
+    //move X axis
+    var newLocX= offsetX >=0 ? Math.floor(currentX/tile) + 1
+                                 : Math.floor((currentX+offsetX)/tile);
+    //boundary check (DONE)
+    if (newLocX < 0 || newLocX >= COLS) {
+        return 0;
     }
     //"true" collision check
-    
-
-    
-    if (currentX + offsetX === 20 &&
-        currentY + offsetY === 7) {
-        skillModal.style.display = "block";
+    if (board[Math.floor(currentY/tile)][newLocX] === 1 ||
+        board[Math.ceil(currentY/tile)][newLocX] === 1 ) {
+        return 0;
     }
-
-    if (currentX + offsetX === 29 &&
-        currentY + offsetY === 17) {
-        projectModal.style.display = "block";
-    }
-    return true;
+    return offsetX; 
 }
 
 function checkModal() {
-    if (currentX !== 20 ||
-        currentY !== 7) {
-        skillModal.style.display = "none";
-    }
+    // if (board[currentY][currentX] !== 6) {
+    //     skillModal.style.display = "none";
+    // }
 
-    if (currentX !== 29 ||
-        currentY !== 17) {
-        projectModal.style.display = "none";
-    }
+    // if (currentX !== 29 ||
+    //     currentY !== 17) {
+    //     projectModal.style.display = "none";
+    // }
 }
 function newGame() {
-    init(); //clear the board
     createChar();   //create the moving character
 }
 

@@ -7,6 +7,17 @@ document.body.onkeydown = function( e ) {
     };
     if ( typeof keys[ e.keyCode ] != 'undefined' ) {
         keyPress( keys[ e.keyCode ] );
-        updateFrame();
+    }
+};
+
+document.body.onkeyup = function( e ) {
+    var keys = {
+        37: 'left',
+        39: 'right',
+        40: 'down',
+        38: 'up'
+    };
+    if ( typeof keys[ e.keyCode ] != 'undefined' ) {
+        keyRelease( keys[ e.keyCode ] );
     }
 };
