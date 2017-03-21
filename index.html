@@ -1,212 +1,46 @@
 <!DOCTYPE html>
-  <html>
-    <head>  
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-      <title>Long Nguyen : Home</title>
-
-       <!-- CSS  -->      
-      <link href="./css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-      <!-- Font Awesome -->
-      <link href="./css/font-awesome.css" rel="stylesheet">
-      <!-- Skill Progress Bar -->
-      <link href="./css/pro-bars.css" rel="stylesheet" type="text/css" media="all" />
-      <!-- Owl Carousel -->
-      <link rel="stylesheet" href="./css/owl.carousel.css">
-      <!-- Default Theme CSS File-->
-      <link id="switcher" href="./css/themes/blue-theme.css" type="text/css" rel="stylesheet" media="screen,projection"/>     
-      <!-- Main css File -->
-      <link href="./style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-
-      <!-- Font -->
-      <link href="./css/icon.css" rel="stylesheet">
-
+<html>
+    <head>
+        <title>Long Nguyen in HTML5</title>
+        <link rel='stylesheet' href='style.css' />
     </head>
-
     <body>
-      <!-- BEGAIN PRELOADER -->         
-      <div id="preloader">        
-        <div class="progress">
-          <div class="indeterminate"></div>
-        </div>        
-      </div>
-      <!-- END PRELOADER -->
-      <header id="header" role="banner">
-        <div class="navbar-fixed">
-          <nav>
-            <div class="container">
-              <div class="nav-wrapper">
+        <canvas width='1280' height='736'></canvas>
+        
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script src='js/main.js'></script>
+        <script src='js/controller.js'></script>
+        <script src='js/render.js'></script>
 
-                <!-- LOGO -->
 
-                <!-- Image Based Logo -->                
-                <ul class="right hide-on-med-and-down custom-nav menu-scroll">
-                  <li><a href="#about">About Me</a></li>
-                  <li><a href="#skill">Skills</a></li>
-                  <li><a href="#portfolio">Portfolio</a></li>
-                </ul>
-                <!-- For Mobile View -->
-                <ul id="slide-out" class="side-nav menu-scroll">
-                  <li><a href="#about">About Me</a></li>
-                  <li><a href="#skill">Skills</a></li>
-                  <li><a href="#portfolio">Portfolio</a></li>  
-                </ul>
-                <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-              </div>
-            </div>
-          </nav>
-        </div>  
-      </header>
-      <div class="main-wrapper">
-        <main role="main">
-          <!-- START HOME SECTION -->
-          <section id="home">
-            <div class="overlay-section">
-              <div class="container">
-                <div class="row">
-                  <div class="col s12">
-                    <div class="home-inner">
-                      <h1 class="home-title">Hello! I'm <span>Long</span></h1>
-                      <p>I like making cool things</p>                   
-                    </div>
-                  </div>  
-                </div>
-              </div>
-            </div>
-          </section>
 
-          <!-- START ABOUT SECTION -->
-          <section id="about">
-            <div class="container">
-              <div class="row">
-                <div class="col s12">
-                  <div class="about-inner">
-                    <div class="row">
-                      <div class="col s12 m8 l9">
-                        <div class="about-inner-right">
-                          <h3>About Me</h3>
-                          <p>Hello There... My name is Long</p>
-                          <div class="personal-information col s12 m12 l6">
-                            <h3>Personal Information</h3>
-                            <ul>
-                              <li><span>Name : </span>Long Nguyen</li>
-                              <li><span>Phone : </span>(226) 789-9142</li>
-                              <li><span>Education: </span>University of Waterloo | Bachelor of Computer Science</li>
-                              <li><span>Email : </span>l34nguye@uwaterloo.ca</li>
-                              <li><span>Address : </span>Waterloo, ON</li>
-                            </ul>
-                          </div>
-                          <div class="resume-download col s12 m12 l6">
-                            <a href="https://www.student.cs.uwaterloo.ca/~l34nguye/Long_Nguyen_resume.pdf" class="waves-effect waves-light btn-large resume-btn" download="LongNguyenResume.pdf"><i class="mdi-content-archive left"></i> Download Resume</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- Start Resume -->
-          <section id="resume">
-            <!-- Start Skill -->
-            <section id="skill">
-              <div class="container">
-                <div class="skill-inner">
-                  <h2 class="title">Programming Skills</h2>
-                  <!-- Start skills progress bar -->
 
-                  <div class="skill-progress-bar">
-                    <span>Java</span>
-                    <div class="pro-bar-container color-wisteria">
-                      <div class="pro-bar bar-100 color-amethyst" data-pro-bar-percent="90"></div>
-                    </div>
-                    <span>C/C++</span>
-                    <div class="pro-bar-container color-wisteria">
-                      <div class="pro-bar bar-90 color-amethyst" data-pro-bar-percent="90" data-pro-bar-delay="100"></div>
-                    </div>                   
-                    <span>Python</span>
-                    <div class="pro-bar-container color-wisteria">
-                      <div class="pro-bar bar-50 color-amethyst" data-pro-bar-percent="50" data-pro-bar-delay="200"></div>
-                    </div>
-                    <span>PostgresSQL</span>
-                    <div class="pro-bar-container color-wisteria">
-                      <div class="pro-bar bar-50 color-amethyst" data-pro-bar-percent="60" data-pro-bar-delay="300"></div>
-                    </div>
-                    <span>HTML/CSS</span>
-                    <div class="pro-bar-container color-wisteria">
-                      <div class="pro-bar bar-50 color-amethyst" data-pro-bar-percent="50" data-pro-bar-delay="400"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-                       
-          <!-- Start Portfolio -->
-          <section id="portfolio">
-            <div class="portfolio-top">
-              <div class="container">
-                <div class="portfolio-top-inner">
-                   <h2 class="title">Portfolio</h2>
-                   <div class="controls">  
-                    <button class="filter waves-effect waves-light btn" data-filter="all">All</button>
-                    <button class="filter waves-effect waves-light btn" data-filter=".cpp">C/C++</button>
-                    <button class="filter waves-effect waves-light btn" data-filter=".java">Java</button>
-                </div>
-              </div>
-            </div>
-            </div>
-            <div class="portfolio-bottom">
-              <div class="container">
-                <div class="portfolio-bottom-inner">
-                  <div id="portfolio-list">                    
-                    <div class="mix cpp" data-value="2">
-                      <a title="Tetris">
-                        <img src="./img/portfolio/cpp/cppTetris.png" alt="img">
-                        <i class="material-icons view-icon">pageview</i>
-                      </a>
-                    </div>
-                    <div class="mix java" data-value="4">
-                      <a>
-                        <img src="./img/portfolio/java/breakoutjava.png" alt="img">
-                        <i class="material-icons view-icon">pageview</i>           
-                      </a>
-                    </div>
-                    <div class="mix java" data-value="1">
-                      <a>
-                        <img src="./img/portfolio/java/breakoutgamejava.png" alt="img">
-                        <i class="material-icons view-icon">pageview</i>
-                      </a>
-                    </div>
-                    <div class="mix java" data-value="3">
-                      <a>
-                        <img src="./img/portfolio/java/doodlejava.png" alt="img">
-                        <i class="material-icons view-icon">pageview</i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </main>
-      </div>
-      <!-- jQuery Library -->
-      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <!-- Materialize js -->
-      <script type="text/javascript" src="./js/materialize.min.js"></script>
-      <!-- Skill Progress Bar -->
-      <script src="./js/appear.min.js" type="text/javascript"></script>
-      <script src="./js/pro-bars.min.js" type="text/javascript"></script>
-      <!-- Owl slider -->      
-      <script src="./js/owl.carousel.min.js"></script>    
-      <!-- Mixit slider  -->
-      <script src="./js/jquery.mixitup.min.js"></script>
-      <!-- counter -->
-      <script src="./js/waypoints.min.js"></script>
-      <script src="./js/jquery.counterup.min.js"></script>     
+        <!--             Modal                               -->
+        
 
-      <!-- Custom Js -->
-      <script src="./js/custom.js"></script>      
+        <div id="skillModal" class="modal">
+            <div class="skillModal-content">
+                <div class="skillModal-body">
+                    <progress max="100" curr="90" value="1"></progress><div id="val"></div>
+                </div>
+            </div>
+        </div>
+        <script src='js/skillModal.js'></script>
+        <script src='js/animated.js'></script>
+
+
+
+
+        <div id="projectModal" class="modal">
+            <div class="projectModal-content">
+              <div class="projectModal-body">
+                <h1>OTHER MODAL</h1>
+                <p>Some other text...</p>
+              </div>
+            </div>
+        </div>
+
+        <script src='js/projectModal.js'></script>
+        <!--             End Modal                               -->
     </body>
-  </html>
+</html>
