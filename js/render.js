@@ -17,7 +17,7 @@ var pivotY= 0;
             
 //chartacter image            
 var actor = new Image(); 
-actor.src = "sprite/character.png";
+actor.src = "./sprite/character.png";
             
 function updateFrame(){
     curFrame = ++curFrame % frameCount;                 

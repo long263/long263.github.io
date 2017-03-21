@@ -19,7 +19,7 @@
 
 
 body {
-    background:url("sprite/bodybg.png");
+    background:url("./sprite/bodybg.png");
     background-size: cover;
 }
 p{ 
@@ -42,7 +42,7 @@ h1{
 canvas {
     display: block;
     margin: auto;
-    background:url("sprite/tile.png");
+    background:url("./sprite/tile.png");
     background-size: cover;
 
 }
@@ -74,7 +74,7 @@ canvas {
 
 .skillModal-content {
     position: relative;
-    background:url("sprite/scroll.png");
+    background:url("./sprite/scroll.png");
     background-size:     contain;
     background-repeat:   no-repeat;
     background-position: center;
@@ -99,7 +99,7 @@ canvas {
 
 .projectModal-content {
     position: relative;
-    background:url("sprite/otherscroll.png");
+    background:url("./sprite/otherscroll.png");
     background-size:     contain;
     background-repeat:   no-repeat;
     background-position: center;
