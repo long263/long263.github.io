@@ -42,12 +42,12 @@ var scrollY = 2*tile;
 //Project Display
 var projDisplay = new Image();
 projDisplay.src = "./sprite/display.png";
-var projDisplayX = 35*tile;
+var projDisplayX = 20*tile;
 var projDisplayY = 21*tile;
 
 var jobDisplay = new Image();
 jobDisplay.src = "./sprite/display.png";
-var jobDisplayX = 20*tile;
+var jobDisplayX = 35*tile;
 var jobDisplayY = 21*tile;
 //---------------------------------------
 
@@ -61,6 +61,7 @@ var pivotY= 0;
             
 function updateFrame(){
 	clearOldFrame();
+    checkModal();
 	var tempSpeed = 0;
     curFrame = ++curFrame % frameCount;                 
     pivotX = curFrame * actorWidth;
@@ -71,7 +72,6 @@ function updateFrame(){
     	case 1:
     		tempSpeed = checkCollision(0,-speed);
     		if (tempSpeed !== 0) {
-    			
     			currentY += tempSpeed;
     		}
     		break;
@@ -96,7 +96,10 @@ function updateFrame(){
     }
      
 }
-            
+      
+
+
+//-----------------------------DRAW METHODS-----------------------------//
 function drawActor() {
     updateFrame();
     checkModal();
@@ -104,8 +107,26 @@ function drawActor() {
     ctx.drawImage(actor,pivotX,pivotY,actorWidth,actorHeight,
                   currentX,currentY,actorWidth,actorHeight);
 }
+function drawText() {
+    //education
+    ctx.clearRect(14*tile,tile,tile*6,tile);
+    ctx.font = '20px prstart';
+    ctx.fillStyle = '#dee0e2';
+    ctx.textBaseline = 'top';
+    ctx.fillText('Education', 455, 40);
 
+    ctx.clearRect(31*tile,0,tile*4,tile);
+    ctx.fillStyle = 'black';
+    ctx.fillText('Skills', 992, 11);
+
+    ctx.clearRect(19*tile,22*tile,tile*15,tile);
+    ctx.fillStyle = 'black';
+    ctx.fillText('Projects and Experience', 620, 713);
+
+
+}
 function drawObj() {
+    drawText();
     //draw skill chest
     ctx.clearRect(chestX,chestY,objWidth,objHeight);
     ctx.drawImage(chest,pivotX,0,objWidth,objHeight,
@@ -131,6 +152,10 @@ function drawObj() {
                   jobDisplayX,jobDisplayY,objWidth,objHeight);
 }
 
+
+//-------------------------------------------------------//
+
+//Timer
 setInterval(drawActor,80);
 setInterval(drawObj,240);
             

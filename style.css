@@ -1,11 +1,12 @@
 /*---------------------------------------------------------------*/
 /*                              FONT                             */ 
 /*---------------------------------------------------------------*/
+
 @font-face {
   font-family: prstart;
   src: local("Helvetica Neue Bold"),
        local("HelveticaNeue-Bold"),
-       url(font/prstartk.ttf);
+       url(./font/prstartk.ttf);
   font-weight: bold;
 }
 
@@ -13,7 +14,7 @@
   font-family: flipps;
   src: local("Helvetica Neue Bold"),
        local("HelveticaNeue-Bold"),
-       url(font/flipps.otf);
+       url(./font/flipps.otf);
   font-weight: bold;
 }
 
@@ -22,15 +23,37 @@ body {
     background:url("./sprite/bodybg.png");
     background-size: cover;
 }
-p{ 
-   font-family: 'flipps'; 
-   font-weight: normal; 
-   font-style: normal; 
+#load {
+            font-family:prstart;
+            visibility: hidden;
+            height: 0px;
 }
-h1{ 
+
+p{ 
    font-family: 'prstart'; 
    font-weight: normal; 
-   font-style: normal; 
+   font-style: normal;
+   margin: 5% 0% 0% 10%;
+   font-size: 100%;
+   width: 70%;
+   line-height: 250%;
+}
+.big {
+  width: 70%;
+  line-height: 150%;
+}
+
+.small {
+  width: 100%;
+  font-size: 80%;
+  line-height: 100%;
+  margin: 10% 0% 0% 35%;
+}
+h1{ 
+   font-family: 'flipps'; 
+   font-weight: normal; 
+   font-style: normal;
+   margin: 3% 0% 0% 32%;
 }
 
 
@@ -38,7 +61,11 @@ h1{
 /*---------------------------------------------------------------*/
 /*                             CANVAS                            */ 
 /*---------------------------------------------------------------*/
-
+.myFont {
+  font-family: 'flipps'; 
+  font-weight: normal; 
+  font-style: normal;
+}
 canvas {
     display: block;
     margin: auto;
@@ -64,6 +91,56 @@ canvas {
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
+/*==============  NOTICE MODAL ================*/
+.noticeModal-body {
+    position: center;
+    padding: 20% 0% 0% 10%;
+  
+
+}
+
+.noticeModal-content {
+    position: relative;
+    background:url("./sprite/fscroll3.png");
+    background-size:     contain;
+    background-repeat:   no-repeat;
+    background-position: center;
+    margin: 1% auto;
+    padding: 0;
+    width: 40%;
+    height: 80%;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+
+/*==============  EDUCATION MODAL ================*/
+.eduModal-body {
+    position: center;
+    padding: 35% 0% 0% 10%;
+  
+
+}
+
+.eduModal-content {
+    position: relative;
+    background:url("./sprite/fscroll4.png");
+    background-size:     contain;
+    background-repeat:   no-repeat;
+    background-position: center;
+    margin: 1% auto;
+    padding: 0;
+    width: 40%;
+    height: 80%;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+
 
 /*==============  SKILL MODAL ================*/
 .skillModal-body {
@@ -74,7 +151,7 @@ canvas {
 
 .skillModal-content {
     position: relative;
-    background:url("./sprite/modalscroll.png");
+    background:url("./sprite/verscroll.png");
     background-size:     contain;
     background-repeat:   no-repeat;
     background-position: center;

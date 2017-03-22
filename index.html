@@ -3,43 +3,43 @@
     <head>
         <title>Long Nguyen in 2D</title>
         <link rel='stylesheet' href='style.css' />
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
+        <div id="load">preloading font, this should not show</div>
+
         <canvas width='1280' height='736'></canvas>
-        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-        <script src='js/main.js'></script>
-        <script src='js/controller.js'></script>
-        <script src='js/render.js'></script>
-
-
+        
+        <script src='./js/main.js'></script>
+        <script src='./js/controller.js'></script>
+        <script src='./js/render.js'></script>
+        <script src='./js/animated.js'></script>
+        
 
 
         <!--             Modal                               -->
-        
-
-        <div id="skillModal" class="modal">
-            <div class="skillModal-content">
-                <div class="skillModal-body">
-                    <progress max="100" curr="90" value="1"></progress><div id="val"></div>
+        <div id="noticeModal" class="modal">
+            <div class="noticeModal-content">
+                <div class="noticeModal-body">
                 </div>
             </div>
         </div>
-        <script src='js/skillModal.js'></script>
-        <script src='js/animated.js'></script>
+        <script src='./js/noticeModal.js'></script>
 
 
-
-
-        <div id="projectModal" class="modal">
-            <div class="projectModal-content">
-              <div class="projectModal-body">
-                <h1>OTHER MODAL</h1>
-                <p>Some other text...</p>
-              </div>
+        <div id="eduModal" class="modal">
+            <div class="eduModal-content">
+                <div class="eduModal-body">
+                    <p class="big">. Bachelor of Computer Science</p>
+                    <p class="big">. Univeristy of Waterloo</p>
+                    <p class="big">. Jan 2012 - Jan 2017</p>
+                </div>
             </div>
         </div>
+        <script src='./js/eduModal.js'></script>
 
-        <script src='js/projectModal.js'></script>
+
         <!--             End Modal                               -->
     </body>
 </html>
