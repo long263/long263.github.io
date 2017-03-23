@@ -24,9 +24,9 @@ body {
     background-size: cover;
 }
 #load {
-            font-family:prstart;
-            visibility: hidden;
-            height: 0px;
+  font-family:prstart;
+  visibility: hidden;
+  height: 0px;
 }
 
 p{ 
@@ -34,21 +34,24 @@ p{
    font-weight: normal; 
    font-style: normal;
    margin: 5% 0% 0% 10%;
-   font-size: 100%;
-   width: 70%;
+   font-size: 80%;
+   width: 60%;
    line-height: 250%;
 }
 .big {
-  width: 70%;
-  line-height: 150%;
+  margin-top: 3%;
+  width: 60%;
+  line-height: 125%;
 }
 
 .small {
-  width: 100%;
+  width: 70%;
   font-size: 80%;
+  font-style:italic;
   line-height: 100%;
   margin: 10% 0% 0% 35%;
 }
+
 h1{ 
    font-family: 'flipps'; 
    font-weight: normal; 
@@ -56,16 +59,18 @@ h1{
    margin: 3% 0% 0% 32%;
 }
 
+h2{ 
+   font-family: 'flipps'; 
+   font-weight: normal; 
+   font-style: normal;
+   margin: 3% 0% 0% 25%;
+}
+
 
 
 /*---------------------------------------------------------------*/
 /*                             CANVAS                            */ 
 /*---------------------------------------------------------------*/
-.myFont {
-  font-family: 'flipps'; 
-  font-weight: normal; 
-  font-style: normal;
-}
 canvas {
     display: block;
     margin: auto;
@@ -73,6 +78,39 @@ canvas {
     background-size: cover;
 
 }
+
+
+
+
+/*---------------------------------------------------------------*/
+/*                             FORM                              */ 
+/*---------------------------------------------------------------*/
+#contactme {
+  color: black;
+  font-size:30px;
+  padding: 3% 0% 0% 0%;
+}
+form {
+  font-family: 'prstart'; 
+  font-weight: normal; 
+  font-style: normal;
+  padding:0% 0% 0% 2%;
+}
+
+form input[type=text] {
+  margin: 1% 0% 1% 0%;
+}
+input {
+  font-family: 'prstart'; 
+  font-weight: normal; 
+  font-style: normal;
+}
+
+textarea {
+  width: 40%;
+  height: 120px;
+}
+
 
 /*---------------------------------------------------------------*/
 /*                             MODAL                             */ 
@@ -91,109 +129,6 @@ canvas {
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-/*==============  NOTICE MODAL ================*/
-.noticeModal-body {
-    position: center;
-    padding: 20% 0% 0% 10%;
-  
-
-}
-
-.noticeModal-content {
-    position: relative;
-    background:url("./sprite/fscroll3.png");
-    background-size:     contain;
-    background-repeat:   no-repeat;
-    background-position: center;
-    margin: 1% auto;
-    padding: 0;
-    width: 40%;
-    height: 80%;
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.4s
-}
-
-
-/*==============  EDUCATION MODAL ================*/
-.eduModal-body {
-    position: center;
-    padding: 35% 0% 0% 10%;
-  
-
-}
-
-.eduModal-content {
-    position: relative;
-    background:url("./sprite/fscroll4.png");
-    background-size:     contain;
-    background-repeat:   no-repeat;
-    background-position: center;
-    margin: 1% auto;
-    padding: 0;
-    width: 40%;
-    height: 80%;
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.4s
-}
-
-
-
-/*==============  SKILL MODAL ================*/
-.skillModal-body {
-    padding: 15% 0% 0% 25%;
-  
-
-}
-
-.skillModal-content {
-    position: relative;
-    background:url("./sprite/verscroll.png");
-    background-size:     contain;
-    background-repeat:   no-repeat;
-    background-position: center;
-    margin: 1% auto;
-    padding: 0;
-    width: 40%;
-    height: 80%;
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.4s
-}
-
-
-
-/*==============  PROJECT MODAL ================*/
-
-.projectModal-body {
-    position: center;
-    padding: 25% 0% 0% 25%;
-}
-
-.projectModal-content {
-    position: relative;
-    background:url("./sprite/otherscroll.png");
-    background-size:     contain;
-    background-repeat:   no-repeat;
-    background-position: center;
-    margin: 1% auto;
-    padding: 0;
-    width: 40%;
-    height: 80%;
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.4s
-}
-
-
-
-
-
 
 /*=========== MODAL Animation ====================*/
 @-webkit-keyframes animatetop {
@@ -204,4 +139,24 @@ canvas {
 @keyframes animatetop {
     from {top: -300px; opacity: 0}
     to {top: 0; opacity: 1}
+}
+
+@-webkit-keyframes animateleft {
+    from {left: -400px; opacity: 0} 
+    to {left: 0; opacity: 1}
+}
+
+@keyframes animateleft {
+    from {left: -400px; opacity: 0}
+    to {left: 0; opacity: 1}
+}
+
+@-webkit-keyframes animatebottom {
+    from {bottom: : -400px; opacity: 0} 
+    to {bottom: 0; opacity: 1}
+}
+
+@keyframes animatebottom {
+    from {bottom: -400px; opacity: 0}
+    to {bottom: 0; opacity: 1}
 }

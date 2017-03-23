@@ -25,8 +25,8 @@ var objHeight = objSpriteHeight;
 //Skills Chest
 var chest = new Image();
 chest.src = "./sprite/chest.png";
-var chestX = 36*tile;
-var chestY = 2*tile;
+var chestX = 33*tile;
+var chestY = 1*tile;
 
 //Diploma Scroll+ books
 var book = new Image();
@@ -42,13 +42,13 @@ var scrollY = 2*tile;
 //Project Display
 var projDisplay = new Image();
 projDisplay.src = "./sprite/display.png";
-var projDisplayX = 20*tile;
-var projDisplayY = 21*tile;
+var projDisplayX = 16*tile;
+var projDisplayY = 19*tile;
 
 var jobDisplay = new Image();
 jobDisplay.src = "./sprite/display.png";
 var jobDisplayX = 35*tile;
-var jobDisplayY = 21*tile;
+var jobDisplayY = 16*tile;
 //---------------------------------------
 
 
@@ -126,15 +126,22 @@ function drawText() {
 
 }
 function drawObj() {
+    if (!started) {
+        var tempNmbody = document.getElementsByClassName("noticeModal-body")[0];
+        noticeModal.style.display = "block";
+        tempNmbody.innerHTML = "<h2>Hi, I am Long.</h2><p class='big'>Welcome to my world!</p><p class='big'>Press arrow keys to move around.</p><p class='big'>Look for the animated objects and sign boards</p><p class='small'>Press anykey to continue.</p>";
+    }
     drawText();
     //draw skill chest
     ctx.clearRect(chestX,chestY,objWidth,objHeight);
     ctx.drawImage(chest,pivotX,0,objWidth,objHeight,
                   chestX,chestY,objWidth,objHeight);
-    //draw book
-    ctx.clearRect(bookX,bookY,objWidth,objHeight);
-    ctx.drawImage(book,pivotX,0,objWidth,objHeight,
-                  bookX,bookY,objWidth,objHeight);
+    if (drawBook) {
+        //draw book
+        ctx.clearRect(bookX,bookY,objWidth,objHeight);
+        ctx.drawImage(book,pivotX,0,objWidth,objHeight,
+                      bookX,bookY,objWidth,objHeight);
+    }   
 
     //draw diploma scroll
     ctx.clearRect(scrollX,scrollY,objWidth,objHeight);

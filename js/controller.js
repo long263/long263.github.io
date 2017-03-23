@@ -1,5 +1,7 @@
 document.body.onkeydown = function( e ) {
+    started = true;
     var keys = {
+        13: 'enter',
         37: 'left',
         39: 'right',
         40: 'down',
@@ -12,6 +14,7 @@ document.body.onkeydown = function( e ) {
 
 document.body.onkeyup = function( e ) {
     var keys = {
+        13: 'enter',
         37: 'left',
         39: 'right',
         40: 'down',

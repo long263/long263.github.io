@@ -1,0 +1,241 @@
+/*==============  PROJECT MODAL ================*/
+.tiny {
+  width: 100%;
+  font-size: 70%;
+  line-height: 100%;
+  margin: 0% 0% 0% 35%;
+  padding-top: 5%;
+}
+
+.tini {
+  width: 100%;
+  font-size: 50%;
+  font-style:italic;
+  line-height: 20%;
+  margin: 0% 0% 0% 60%;
+  padding-top: 3%;
+}
+
+.tini2 {
+  width: 100%;
+  font-size: 60%;
+  font-style:italic;
+  line-height: 20%;
+  margin: 0% 0% 0% 20%;
+  padding-top: 5%;
+}
+
+
+.projModal-body {
+    position: center;
+}
+
+.projModal-content {
+  position: relative;
+  width: 70%;
+  height: 100%;
+  background:url("../sprite/fscroll2.png");
+  background-size:     contain;
+  background-repeat:   no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  margin: 1% auto;
+  padding: 0;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+
+
+
+/*==============  C/C++ ================*/
+#textytab {
+  margin: 15% 0% 0% 0%;
+}
+
+#zeldaImg {
+  border-top: 3px dotted #000;
+  border-bottom: 3px dotted #000;
+  box-shadow: inset 0 -1px 0 0 #000, inset 0 1px 0 0 #000, 0 1px 0 0 #000, 0 -1px 0 0 #000;
+  background:url("../img/zelda.png");
+  background-size: 100% 100%;
+  background-repeat:   no-repeat;
+  background-position: center;
+  height:18%;
+  width:22%;
+  position:absolute; 
+}
+
+#zeldaImg:hover {
+  border-top: 3px dotted #000;
+  border-bottom: 3px dotted #000;
+  box-shadow: inset 0 -1px 0 0 #000, inset 0 1px 0 0 #000, 0 1px 0 0 #000, 0 -1px 0 0 #000;
+  background:url("../img/zelda.gif");
+  background-size: 100% 100%;
+  background-repeat:   no-repeat;
+  background-position: center; 
+}
+
+#zeldaContent {
+  height: 18%;
+  width: 45%;
+  margin-left:20%;
+}
+
+#rayImg {
+  border-top: 3px dotted #000;
+  border-bottom: 3px dotted #000;
+  box-shadow: inset 0 -1px 0 0 #000, inset 0 1px 0 0 #000, 0 1px 0 0 #000, 0 -1px 0 0 #000;
+  background:url("../img/ray.png");
+  background-size: 100% 100%;
+  background-repeat:   no-repeat;
+  background-position: center;
+  height:22.5%;
+  width:17.1%;
+  position:absolute;
+  margin: 2% 0% 0% 32%;
+}
+
+#rayImg:hover {
+  border-top: 3px dotted #000;
+  border-bottom: 3px dotted #000;
+  box-shadow: inset 0 -1px 0 0 #000, inset 0 1px 0 0 #000, 0 1px 0 0 #000, 0 -1px 0 0 #000;
+  background:url("../img/ray2.png");
+  background-size: 100% 100%;
+  background-repeat:   no-repeat;
+  background-position: center; 
+}
+
+#rayContent {
+  height: 18%;
+  width: 45%;
+  margin: 8% 0% 0% -5%;
+}
+
+
+#tetrisImg {
+  border-top: 3px dotted #000;
+  border-bottom: 3px dotted #000;
+  box-shadow: inset 0 -1px 0 0 #000, inset 0 1px 0 0 #000, 0 1px 0 0 #000, 0 -1px 0 0 #000;
+  background:url("../img/cppTetris.png");
+  background-size: 100% 100%;
+  background-repeat:   no-repeat;
+  background-position: center;
+  height:22.5%;
+  width:18%;
+  position:absolute;
+  margin: 2% 0% 0% 0%;
+}
+
+#tetrisImg:hover {
+  border-top: 3px dotted #000;
+  border-bottom: 3px dotted #000;
+  box-shadow: inset 0 -1px 0 0 #000, inset 0 1px 0 0 #000, 0 1px 0 0 #000, 0 -1px 0 0 #000;
+  background:url("../img/tetris.gif");
+  background-size: 100% 100%;
+  background-repeat:   no-repeat;
+  background-position: center; 
+}
+
+#tetrisContent {
+  height: 18%;
+  width: 45%;
+  margin: 15% 0% 0% 10%;
+}
+
+
+/*==============  JAVA ================*/
+
+#boutImg {
+  border-top: 3px dotted #000;
+  border-bottom: 3px dotted #000;
+  box-shadow: inset 0 -1px 0 0 #000, inset 0 1px 0 0 #000, 0 1px 0 0 #000, 0 -1px 0 0 #000;
+  background:url("../img/breakoutgamejava.png");
+  background-size: 100% 100%;
+  background-repeat:   no-repeat;
+  background-position: center;
+  height:24.3%;
+  width:10.8%;
+  margin:0.5% 0% 0% 5%;
+  position:absolute; 
+}
+
+#boutImg:hover {
+  border-top: 3px dotted #000;
+  border-bottom: 3px dotted #000;
+  box-shadow: inset 0 -1px 0 0 #000, inset 0 1px 0 0 #000, 0 1px 0 0 #000, 0 -1px 0 0 #000;
+  background:url("../img/breakout.gif");
+  background-size: 100% 100%;
+  background-repeat:   no-repeat;
+  background-position: center; 
+}
+
+#boutContent {
+  height: 18%;
+  width: 45%;
+  margin-left:10%;
+}
+
+
+#doodleImg {
+  border-top: 3px dotted #000;
+  border-bottom: 3px dotted #000;
+  box-shadow: inset 0 -1px 0 0 #000, inset 0 1px 0 0 #000, 0 1px 0 0 #000, 0 -1px 0 0 #000;
+  background:url("../img/doodlejava.png");
+  background-size: 100% 100%;
+  background-repeat:   no-repeat;
+  background-position: center;
+  height:18%;
+  width:24.3%;
+  margin:13% 0% 0% 30%;
+  position:absolute; 
+}
+
+#doodleImg:hover {
+  border-top: 3px dotted #000;
+  border-bottom: 3px dotted #000;
+  box-shadow: inset 0 -1px 0 0 #000, inset 0 1px 0 0 #000, 0 1px 0 0 #000, 0 -1px 0 0 #000;
+  background:url("../img/doodle.gif");
+  background-size: 100% 100%;
+  background-repeat:   no-repeat;
+  background-position: center; 
+}
+
+#doodleContent {
+  height: 18%;
+  width: 45%;
+  margin: 22% 0% 0% -10%;
+}
+
+
+/*==============  ANDROID ================*/
+.norm {
+  width: 45%;
+  font-size: 100%;
+  margin: 0% 0% 0% 0%;
+  padding-top: 0%;
+}
+
+#desc {
+  font-size: 100%;
+  margin: 0% 0% 0% 0%;
+  padding-top: 0%;
+  display:inline;
+  word-wrap: break-word;
+}
+
+#pers {
+  width: 54%;
+  font-size: 100%;
+  margin: -4% 0% 0% 9.5%;
+  padding-top: 0%;
+  
+}
+
+a {
+  font-family: 'prstart'; 
+  font-weight: normal; 
+  font-style: normal;
+}
