@@ -94,7 +94,7 @@ function educated(val) { //1 means hit the door, 0 means hit the book
     switch (degree) {
       case 0:
         noticeModal.style.display = "block";
-        nmbody.innerHTML = "<h1>Notice</h1><p class='big'>One does not simply walk in and get a degree.</p><p class='big'>Go back to the room and study some books.</p><p class='small'>Move left to dismiss.</p>";
+        nmbody.innerHTML = "<h2>Notice</h2><p class='big'>One does not simply walk in and get a degree.</p><p class='big'>Go back to the room and study some books.</p><p class='small'>Move left to dismiss.</p>";
         drawBook = true;
         break;
       case 1:
@@ -104,7 +104,7 @@ function educated(val) { //1 means hit the door, 0 means hit the book
       case 2:
         entered = 1;
         noticeModal.style.display = "block";
-        nmbody.innerHTML = "<h1>Notice</h1><p class='big'>One more thing: The signs outside will contain the information after you unlocked what inside the rooms.</p><p class='small'>press 'Enter' to dismiss.</p>";
+        nmbody.innerHTML = "<h2>Notice</h2><p class='big'>One more thing: The signs outside will contain the information after you unlocked what inside the rooms.</p><p class='small'>press 'Enter' to dismiss.</p>";
         canMove = true;
         degree = 3;
         break;
@@ -116,7 +116,7 @@ function educated(val) { //1 means hit the door, 0 means hit the book
   //hit ht book
   }else if (val === 0  && degree === 0){
     noticeModal.style.display = "block";
-    nmbody.innerHTML = "<h1>Notice</h1><p class='big'>Read all the books!</p><p class='big'>Time to get the degree!</p><p class='small'>Move right to dismiss.</p>";
+    nmbody.innerHTML = "<h2>Notice</h2><p class='big'>Read all the books!</p><p class='big'>Time to get the degree!</p><p class='small'>Move right to dismiss.</p>";
     degree = 1;
     canMove = true;
   }else {
@@ -174,7 +174,7 @@ function checkCollision(offsetX, offsetY) {
             entered = 1;
             var nmbodyx = document.getElementsByClassName("noticeModal-body")[0];
             noticeModal.style.display = "block";
-            nmbodyx.innerHTML = "<h1>Notice</h1><p class='big'>You need to use the mouse while checking projects.</p><p class='small'>press 'Enter' to dismiss.</p>";
+            nmbodyx.innerHTML = "<h2>Notice</h2><p class='big'>You need to use the mouse while checking projects.</p><p class='small'>press 'Enter' to dismiss.</p>";
             mouseUse = true;
           }
         }

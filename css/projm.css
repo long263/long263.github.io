@@ -213,13 +213,13 @@
 /*==============  ANDROID ================*/
 .norm {
   width: 45%;
-  font-size: 100%;
+  font-size: 80%;
   margin: 0% 0% 0% 0%;
   padding-top: 0%;
 }
 
 #desc {
-  font-size: 100%;
+  font-size: 80%;
   margin: 0% 0% 0% 0%;
   padding-top: 0%;
   display:inline;
@@ -228,7 +228,7 @@
 
 #pers {
   width: 54%;
-  font-size: 100%;
+  font-size: 80%;
   margin: -4% 0% 0% 9.5%;
   padding-top: 0%;
   
