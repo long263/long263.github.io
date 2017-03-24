@@ -119,9 +119,12 @@ function drawText() {
     ctx.fillStyle = 'black';
     ctx.fillText('Skills', 992, 11);
 
-    ctx.clearRect(19*tile,22*tile,tile*15,tile);
+    ctx.clearRect(15*tile,22*tile,tile*23,tile);
     ctx.fillStyle = 'black';
-    ctx.fillText('Projects and Experience', 620, 713);
+    ctx.fillText('Projects', 560, 713);
+
+    ctx.fillStyle = 'black';
+    ctx.fillText('Experience', 1000, 713);
 
 
 }
@@ -129,7 +132,7 @@ function drawObj() {
     if (!started) {
         var tempNmbody = document.getElementsByClassName("noticeModal-body")[0];
         noticeModal.style.display = "block";
-        tempNmbody.innerHTML = "<h2>Hi, I am Long.</h2><p class='big'>Welcome to my world!</p><p class='big'>Press arrow keys to move around.</p><p class='big'>Look for the animated objects and sign boards</p><p class='small'>Press anykey to continue.</p>";
+        tempNmbody.innerHTML = "<h2>Hi, I am Long.</h2><p class='big'>Welcome to my world!</p><p class='big'>Press arrow keys to move around.</p><p class='big'>Look for the animated objects and sign boards.</p><p class='small'>Press anykey to continue.</p>";
     }
     drawText();
     //draw skill chest

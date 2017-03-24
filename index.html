@@ -7,6 +7,7 @@
         <link rel='stylesheet' href='./css/noticem.css' />
         <link rel='stylesheet' href='./css/edum.css' />
         <link rel='stylesheet' href='./css/skillm.css' />
+        <link rel='stylesheet' href='./css/expm.css' />
         <link rel='stylesheet' href='./css/contactm.css' />
         <link rel='stylesheet' href='./css/tab.css' />
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -60,6 +61,17 @@
             </div>
         </div>
         <script src='./js/eduModal.js'></script>
+
+        <div id="expModal" class="modal">
+            <div class="expModal-content">
+                <div class="expModal-body">
+                    <h2 id="exph2">EXP</h2>
+                    <p class="pexp"> Oops! Look like this one appears to be blank...</p>
+                    <p class="pexp"> Maybe you could fix that!</p>
+                </div>
+            </div>
+        </div>
+        <script src='./js/expModal.js'></script>
 
 
         <div id="projModal" class="modal">
@@ -126,25 +138,33 @@
         </div>
         <script src='./js/projModal.js'></script>
 
-
+        <script type="text/javascript">var submitted=false;</script>
         <div id="contactModal" class="modal">
             <div class="contactModal-content">
                 <div class="contactModal-body">
                     <p id="contactme">Contact Me:</p>
-                    <form action="contact.php" method="post">
+                    <p id="fade"></p>
+                    <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSfZDFraeE-YBUTNUxEqf_JwqaPnbtaQI1JLZqcoP3p2u4WxuA/formResponse" target="hidden_iframe" onsubmit="submitted=true;">
                         Your name<br>
-                        <input type="text" name="cf_name"><br>
+                        <input type="text" name="entry.28951094" id="entry.28951094"><br>
                         Your e-mail<br>
-                        <input type="text" name="cf_email"><br>
+                        <input type="text" name="entry.1757323515" id="entry.1757323515"><br>
                         Message<br>
-                        <textarea name="cf_message"></textarea><br>
+                        <textarea name="entry.213514423" id="entry.213514423"></textarea><br>
                         <input type="submit" value="Send">
-                        <input type="reset" value="Clear">
                     </form>
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
                 </div>
             </div>
         </div>
-         <script src='./js/contactModal.js'></script>
+        <script type="text/javascript">
+            $('#gform').on('submit', function(e) {
+              $('#gform').fadeOut(500);
+              $('#fade').append('Your message has been sent...');
+              $('#fade').append('Move out to dismiss!');
+            });
+        </script>
+        <script src='./js/contactModal.js'></script>
         <!--             End Modal                               -->
     </body>
 </html>

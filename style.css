@@ -90,6 +90,11 @@ canvas {
   font-size:30px;
   padding: 3% 0% 0% 0%;
 }
+#fade {
+  color: black;
+  font-size:20px;
+  margin: 0% 0% -2% 3%;
+}
 form {
   font-family: 'prstart'; 
   font-weight: normal; 

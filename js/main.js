@@ -6,7 +6,7 @@ var tile = 32;
 var COLS = canvas.width/tile, ROWS = canvas.height/tile;
 var dir = 0; // 0 still, 1 up, 2 right, 3 down, 4 left
 var board = [
-//legend: 2:door, 3:books, 4:sign, 5:edu, 6:skills, 7:projects, 8 :sign, 9:notice door
+//legend: 2:door, 3:books, 4:sign, 5:edu, 6:skills, 7:projects, 8 :sign, 9:notice door , 10:exp
   [1,1,1,1,1,1,1,0,0,0, 0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,1,1,1, 1,1,1,1,1,1,1,1,1,1],
   [0,1,1,1,1,1,1,0,0,0, 0,0,0,1,1,1,1,1,1,1, 1,0,1,1,1,0,0,1,1,1, 1,1,1,6,0,0,1,0,1,1],
   [0,1,1,1,1,0,1,0,0,0, 0,0,0,1,3,1,1,1,0,1, 1,0,1,5,1,0,0,1,1,1, 1,1,1,0,0,0,1,0,1,1],
@@ -168,6 +168,7 @@ function checkCollision(offsetX, offsetY) {
         if (board[newLocY][Math.floor(currentX/tile)] === 8) {
           contactModal.style.display = "block";
         }
+
         if (board[newLocY][Math.floor(currentX/tile)] === 9) {
           if (!mouseUse) {
             entered = 1;
@@ -176,6 +177,11 @@ function checkCollision(offsetX, offsetY) {
             nmbodyx.innerHTML = "<h1>Notice</h1><p class='big'>You need to use the mouse while checking projects.</p><p class='small'>press 'Enter' to dismiss.</p>";
             mouseUse = true;
           }
+        }
+
+        //exp check
+        if (board[newLocY][Math.floor(currentX/tile)] === 10) {
+          expModal.style.display = "block";
         }
         return offsetY;  
     }
@@ -221,6 +227,11 @@ function checkCollision(offsetX, offsetY) {
       contactModal.style.display = "block";
     }
     
+    //exp check
+    if (board[Math.floor(currentY/tile)][newLocX] === 10) {
+      expModal.style.display = "block";
+    }
+
     return offsetX;  
 }
 
@@ -246,6 +257,10 @@ function checkModal() {
 
   if(board[Math.floor(currentY/tile)][Math.floor(currentX/tile)] !== 8) {
     contactModal.style.display = "none";
+  }
+
+  if(board[Math.floor(currentY/tile)][Math.floor(currentX/tile)] !== 10) {
+    expModal.style.display = "none";
   }
 }
 
