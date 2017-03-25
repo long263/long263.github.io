@@ -1,170 +1,158 @@
-/*---------------------------------------------------------------*/
-/*                              FONT                             */ 
-/*---------------------------------------------------------------*/
-
 @font-face {
-  font-family: prstart;
-  src: local("Helvetica Neue Bold"),
-       local("HelveticaNeue-Bold"),
-       url(./font/prstartk.ttf);
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: flipps;
-  src: local("Helvetica Neue Bold"),
-       local("HelveticaNeue-Bold"),
-       url(./font/flipps.otf);
-  font-weight: bold;
+  font-family: 'Roboto';
+  src: url('./interactive/font/Roboto-Regular.ttf') format('ttf');
+  src: url('./interactive/font/Roboto-Regular.wolf') format('wolf');
+  src: url('./interactive/font/Roboto-Regular.wolf2') format('wolf2');
+  font-weight: normal;
+  font-style: normal;
 }
 
 
 body {
-    background:url("./sprite/bodybg.png");
-    background-size: cover;
-}
-#load {
-  font-family:prstart;
-  visibility: hidden;
-  height: 0px;
-}
-
-p{ 
-   font-family: 'prstart'; 
-   font-weight: normal; 
-   font-style: normal;
-   margin: 5% 0% 0% 10%;
-   font-size: 80%;
-   width: 60%;
-   line-height: 250%;
-}
-.big {
-  margin-top: 3%;
-  width: 60%;
-  line-height: 125%;
-}
-
-.small {
-  width: 70%;
-  font-size: 80%;
-  font-style:italic;
-  line-height: 100%;
-  margin: 10% 0% 0% 20%;
-}
-
-h1{ 
-   font-family: 'flipps'; 
-   font-weight: normal; 
-   font-style: normal;
-   margin: 3% 0% 0% 32%;
-}
-
-h2{ 
-   font-family: 'flipps'; 
-   font-weight: normal; 
-   font-style: normal;
-   margin: 0% 0% 0% 15%;
-}
-
-.h2l {
-  margin: 10% 0% 0% 30%;
-  font-size:90%;
-}
-
-/*---------------------------------------------------------------*/
-/*                             CANVAS                            */ 
-/*---------------------------------------------------------------*/
-canvas {
-    display: block;
-    margin: auto;
-    background:url("./sprite/tile.png");
-    background-size: cover;
-
+    background: #444444;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        color-stop(.34, rgba(230,237,241,.05)),
+        color-stop(.67, rgba(230,237,241,0)));
+    -webkit-background-size: 5px 5px;
 }
 
 
+.button {
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    display: inline-block;
+    margin: 0 auto;
+    
+    -webkit-border-radius: 10px;
+    
+    -webkit-box-shadow: 
+        0px 3px rgba(128,128,128,1), /* gradient effects */
+        0px 4px rgba(118,118,118,1),
+        0px 5px rgba(108,108,108,1),
+        0px 6px rgba(98,98,98,1),
+        0px 7px rgba(88,88,88,1),
+        0px 8px rgba(78,78,78,1),
+        0px 14px 6px -1px rgba(128,128,128,1); /* shadow */
+    
+    -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+} 
 
+.button span {
+    background-color: #727070;
+    
+    background-image: 
 
-/*---------------------------------------------------------------*/
-/*                             FORM                              */ 
-/*---------------------------------------------------------------*/
-#contactme {
-  color: black;
-  font-size:30px;
-  padding: 3% 0% 0% 0%;
+        
+        /* dark outside gradient */
+        -webkit-gradient(
+            linear, 
+            left top, 
+            right top, 
+            color-stop(0%,rgba(210,210,210,0.3)), 
+            color-stop(20%,rgba(210,210,210,0)), 
+            color-stop(80%,rgba(210,210,210,0)), 
+            color-stop(100%,rgba(210,210,210,0.3))),
+        
+        /* light inner gradient */
+        -webkit-gradient(
+            linear, 
+            left top, 
+            right top, 
+            color-stop(0%,rgba(255,255,255,0)), 
+            color-stop(20%,rgba(255,255,255,0.5)), 
+            color-stop(80%,rgba(255,255,255,0.5)), 
+            color-stop(100%,rgba(255,255,255,0))),        
+        
+        /* diagonal line pattern */
+        -webkit-gradient(
+            linear, 
+            0% 100%, 
+            100% 0%, 
+            color-stop(0%,rgba(255,255,255,0)), 
+            color-stop(40%,rgba(255,255,255,0)), 
+            color-stop(40%,#D2D2D1), 
+            color-stop(60%,#D2D2D1), 
+            color-stop(60%,rgba(255,255,255,0)), 
+            color-stop(100%,rgba(255,255,255,0)));
+    
+        -webkit-box-shadow:
+            0px -1px #fff, /* top highlight */
+            0px 1px 1px #FFFFFF; /* bottom edge */
+    
+    -webkit-background-size: 100%, 100%, 100%, 4px 4px;
+    
+    -webkit-border-radius: 10px;
+    -webkit-transition: -webkit-transform .1s ease-in-out;
+    
+    display: inline-block;
+    padding: 10px 40px 10px 40px;
+    
+    color: #3a3939;
+    text-transform: uppercase;
+    font-family: "Roboto",sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    
+    text-shadow: 0px 1px #fff, 0px -1px #262F33;
 }
-#fade {
-  color: black;
-  font-size:20px;
-  margin: 0% 0% -2% 3%;
-}
-form {
-  font-family: 'prstart'; 
-  font-weight: normal; 
-  font-style: normal;
-  padding:0% 0% 0% 2%;
+
+.button span:hover {
+    color: black;
+    text-shadow: 0px -1px #97A63A;
+    cursor: pointer;
 }
 
-form input[type=text] {
-  margin: 1% 0% 1% 0%;
-}
-input {
-  font-family: 'prstart'; 
-  font-weight: normal; 
-  font-style: normal;
+.button:active {
+    -webkit-box-shadow: 
+        0px 3px rgba(128,128,128,1),
+        0px 4px rgba(118,118,118,1),
+        0px 5px rgba(108,108,108,1),
+        0px 6px rgba(98,98,98,1),
+        0px 7px rgba(88,88,88,1),
+        0px 8px rgba(78,78,78,1),
+        0px 10px 2px 0px rgba(128,128,128,.6); /* shadow */
 }
 
-textarea {
-  width: 40%;
-  height: 120px;
+.button:active span{
+    -webkit-transform: translate(0, 5px); /* depth of button press */
 }
 
 
-/*---------------------------------------------------------------*/
-/*                             MODAL                             */ 
-/*---------------------------------------------------------------*/
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+
+.bdiv {
+	margin:14% 0% 0% 22%;
 }
 
-
-/*=========== MODAL Animation ====================*/
-@-webkit-keyframes animatetop {
-    from {top: -300px; opacity: 0} 
-    to {top: 0; opacity: 1}
+h1,p {
+  font-family: "Roboto",sans-serif;
 }
 
-@keyframes animatetop {
-    from {top: -300px; opacity: 0}
-    to {top: 0; opacity: 1}
+#intro {
+	margin:-5% 0% 0% 15%;
+	color: #eff4fc;
+	font-size: 40px;
+
+}
+.greet {
+	color:#cdd0d7;
+	font-size: 100px;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-@-webkit-keyframes animateleft {
-    from {left: -400px; opacity: 0} 
-    to {left: 0; opacity: 1}
+.greet em {
+	font-style: normal;
+	color:#184691;
 }
 
-@keyframes animateleft {
-    from {left: -400px; opacity: 0}
-    to {left: 0; opacity: 1}
+#left {
+	margin:25% 0% 0% 20%;
 }
 
-@-webkit-keyframes animatebottom {
-    from {bottom: : -400px; opacity: 0} 
-    to {bottom: 0; opacity: 1}
-}
-
-@keyframes animatebottom {
-    from {bottom: -400px; opacity: 0}
-    to {bottom: 0; opacity: 1}
+#right {
+	margin:25% 0% 0% 38%;
 }
