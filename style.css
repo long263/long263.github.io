@@ -125,7 +125,7 @@ body {
 
 
 .bdiv {
-	margin:14% 0% 0% 22%;
+	margin:14% 14% 0% 14%;
 }
 
 h1,p {
@@ -133,7 +133,7 @@ h1,p {
 }
 
 #intro {
-	margin:-5% 0% 0% 15%;
+	margin:-2% 0% 0% 15%;
 	color: #eff4fc;
 	font-size: 40px;
 
