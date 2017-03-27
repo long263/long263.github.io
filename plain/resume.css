@@ -40,12 +40,13 @@ a { color: #990003 }
 a:hover { text-decoration: none; }
 strong { font-weight: bold; }
 li { line-height: 24px; border-bottom: 1px solid #ccc; }
-p.enlarge { font-size: 144%; padding-right: 6.5em; line-height: 24px; }
+p.enlarge { font-size: 144%; padding-right: 6.5em; line-height: 24px; padding-bottom: 0.5em; }
 p.enlarge span { color: #000 }
 .contact-info { margin-top: 7px; }
-.first h2 { font-style: italic; }
+.first h2 { font-style: italic; font-weight: bold;}
+.second { padding-top: 4.1em; }
+.second2 {padding-top:1.2em;}
 .last { border-bottom: 0 }
-
 
 /* //-- section styles -- */
 

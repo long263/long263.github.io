@@ -132,7 +132,7 @@ function drawObj() {
     if (!started) {
         var tempNmbody = document.getElementsByClassName("noticeModal-body")[0];
         noticeModal.style.display = "block";
-        tempNmbody.innerHTML = "<h2 id='intro'>Hi, I am Long.</h2><p class='big'>Welcome to my world!</p><p class='big'>Press arrow keys to move around.</p><p class='big'>Look for the animated objects and sign boards.</p><p class='small'>Press anykey to continue.</p>";
+        tempNmbody.innerHTML = "<h2 class='intro'>Hi, I am Long.</h2><p class='big'>Welcome to my world!</p><p class='big'>Press arrow keys to move around.</p><p class='big'>Look for the animated objects and sign boards.</p><p class='small'>Press anykey to continue.</p>";
     }
     drawText();
     //draw skill chest
