@@ -125,22 +125,29 @@ body {
 
 
 .bdiv {
-	margin:14% 14% 0% 14%;
+    position:fixed;
+    width:80%;
+    height:50%;
+    margin-top: -25%; /* Changes with height. */
+    margin-left: -40%; /* Your width divided by 2. */
+    top:25%;
+    left:25%;
+	margin:auto;
 }
 
-h1,p {
+h2,p {
   font-family: "Roboto",sans-serif;
 }
 
 #intro {
-	margin:-2% 0% 0% 15%;
+    margin-left:12%;
 	color: #eff4fc;
 	font-size: 40px;
 
 }
 .greet {
 	color:#cdd0d7;
-	font-size: 100px;
+	font-size: 80px;
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
@@ -150,9 +157,11 @@ h1,p {
 }
 
 #left {
-	margin:25% 0% 0% 20%;
+    position:absolute;
+    margin-top:17%;
+    margin-left:5%;
 }
 
 #right {
-	margin:25% 0% 0% 38%;
+
 }
