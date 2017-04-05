@@ -139,11 +139,13 @@ function drawObj() {
     ctx.clearRect(chestX,chestY,objWidth,objHeight);
     ctx.drawImage(chest,pivotX,0,objWidth,objHeight,
                   chestX,chestY,objWidth,objHeight);
-    if (drawBook) {
+    if (drawBook && degree == 0) {
         //draw book
         ctx.clearRect(bookX,bookY,objWidth,objHeight);
         ctx.drawImage(book,pivotX,0,objWidth,objHeight,
                       bookX,bookY,objWidth,objHeight);
+    }else {
+        ctx.clearRect(bookX,bookY,objWidth,objHeight);
     }   
 
     //draw diploma scroll
