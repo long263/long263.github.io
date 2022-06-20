@@ -1,1 +1,154 @@
-<!DOCTYPE html><html> <head> <title>Long Nguyen in 2D</title> <link rel='stylesheet' href='istyle.css'/> <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script> <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> </head> <body> <div id="load">preloading font, this should not show</div><canvas width='1280' height='736'></canvas> <script src='./js/main.js'></script> <script src='./js/render.js'></script> <script src='./js/functionality.js'></script> <div id="noticeModal" class="modal"> <div class="noticeModal-content"> <div class="noticeModal-body"></div></div></div><div id="eduModal" class="modal"> <div class="eduModal-content"> <div class="eduModal-body"> <h2>Degree Obtained:</h2> <p class="pedu">. Bachelor of Computer Science</p><p class="pedu">. Univeristy of Waterloo</p><p class="pedu">. Jan 2012 - Jan 2017</p></div></div></div><div id="skillModal" class="modal"> <div class="skillModal-content"> <div class="skillModal-body"> <h2 class="h2l">Skills Acquired:</h2> <p class="pskill">* Programming Language : Java</p><p class="pskill">* Programming Language : Python</p><p class="pskill">* Programming Language : JavaScript/NodeJs</p><p class="pskill">* Technology: Amazon Web Service(AWS)</p><p class="pskill">* Technology: Apache Spark + Hadoop</p><p class="pskill">* Technology: Apache Airflow</p><p class="pskill">* Technology: Amazon EMR</p><p class="pskill">* Technology: Jenkins</p><p class="pskill">* Technology: Docker (Familiar)</p></div></div></div><div id="expModal" class="modal"> <div class="expModal-content"> <div class="expModal-body"> <h2 id="exph2">EXP</h2> <p class="pexp">Senior Data Engineer @ Genesys</p><p class="pexp">Apr.21 - Now</p><p class="pexp">------</p><p class="pexp">Data Engineer @ Genesys</p><p class="pexp">Mar.20 - Apr.21</p><p class="pexp">------</p><p class="pexp">Software Developer @ Genesys</p><p class="pexp">Mar.19 - Apr.20</p><p class="pexp">------</p><p class="pexp">Associate Software Developer @ Genesys</p><p class="pexp">Jun.17 - Mar.19</p></div></div></div><div id="projModal" class="modal"> <div class="projModal-content"> <div class="projModal-body"> <div class="tab"> <button class="tablinks" onclick="openTab(event, 'C++')">C/C++</button> <button class="tablinks" onclick="openTab(event, 'Java')">Java</button> <button class="tablinks" onclick="openTab(event, 'Android')">Android</button> </div><div id="C++" class="tabcontent"> <div id="zeldaImg" onClick="window.open('https://github.com/longslvr/zelda_openGL','_blank');"></div><div id="zeldaContent"> <p class="tiny"> <---- Program: OpenGL. </p><p class="tiny"> <---- Target: Unix/Linux. </p><p class="tiny"> <---- Desc: Interactive Scene. </p></div><div id="rayImg" onClick="window.open('https://github.com/longslvr/simplified_raytracing','_blank');"></div><div id="rayContent"> <p class="tiny">Target: Unix/Linux.--></p><p class="tiny">Desc: Raytracing.-----></p></div><div id="tetrisImg" onClick="window.open('https://github.com/longslvr/tetriscpp','_blank');"></div><div id="tetrisContent"> <p class="tiny"> <------ Target: Unix/Linux. </p><p class="tiny"> <------ Desc: Tetris Game. </p><p class="tini">________________________</p><p class="tini">. Click on image for source code.</p><p class="tini">. Move character out to dismiss.</p></div></div><div id="Java" class="tabcontent"> <div id="boutImg" onClick="window.open('https://github.com/longslvr/brick_break','_blank');"></div><div id="boutContent"> <p class="tiny"> <------ Target: Unix/Linux. </p><p class="tiny"> <------ Desc: Brick Break Game. </p></div><div id="doodleImg" onClick="window.open('https://github.com/longslvr/doodlejava','_blank');"></div><div id="doodleContent"> <p class="tiny">Target: Unix/Linux.--></p><p class="tiny">Desc: Doodle Drawing.-----></p><p class="tini2">________________________</p><p class="tini2">. Click on image for source code.</p><p class="tini2">. Move character out to dismiss.</p></div></div><div id="Android" class="tabcontent"> <p>---------------------</p><p class="norm">Name: NoteBank</p><p id="desc">Desc:</p><p id="pers">Notesharing platform for University of Waterloo student.</p><p class="norm">Type: group of 4.</p><p>---------------------</p><a class="norm" href="https://github.com/longslvr/note_bank" target="_blank">Source Code</a> </div></div>undefined </div>undefined </div>undefined<script type="text/javascript">var submitted=false; </script>undefined<div id="contactModal" class="modal">undefined<div class="contactModal-content"> <div class="contactModal-body"> <p id="contactme">Contact Me:</p><p id="fade"></p><form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSfZDFraeE-YBUTNUxEqf_JwqaPnbtaQI1JLZqcoP3p2u4WxuA/formResponse" target="hidden_iframe" onsubmit="submitted=true;">Your name <br><input type="text" name="entry.28951094" id="entry.28951094"> <br>Your e-mail <br><input type="text" name="entry.1757323515" id="entry.1757323515"> <br>Message <br><textarea name="entry.213514423" id="entry.213514423"></textarea> <br><input type="submit" value="Send"> </form> <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){}"></iframe> </div></div></div><script type="text/javascript">$('#gform').on('submit', function(e){$('#gform').fadeOut(500); $('#fade').append('Your message has been sent...'); $('#fade').append('Move character out to dismiss!');}); </script> <script src='./js/modal.js'></script> </body></html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Long Nguyen in 2D</title>
+    <link rel='stylesheet' href='istyle.css' />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div id="load">preloading font, this should not show</div>
+    <canvas width='1280' height='736'></canvas>
+    <script src='./js/main.js'></script>
+    <script src='./js/render.js'></script>
+    <script src='./js/functionality.js'></script>
+    <div id="noticeModal" class="modal">
+      <div class="noticeModal-content">
+        <div class="noticeModal-body"></div>
+      </div>
+    </div>
+    <div id="eduModal" class="modal">
+      <div class="eduModal-content">
+        <div class="eduModal-body">
+          <h2>Degree Obtained:</h2>
+          <p class="pedu">. Bachelor of Computer Science</p>
+          <p class="pedu">. Univeristy of Waterloo</p>
+          <p class="pedu">. Jan 2012 - Jan 2017</p>
+        </div>
+      </div>
+    </div>
+    <div id="skillModal" class="modal">
+      <div class="skillModal-content">
+        <div class="skillModal-body">
+          <h2 class="h2l">Skills Acquired:</h2>
+          <p class="pskill">* Programming Language : Java</p>
+          <p class="pskill">* Programming Language : Python</p>
+          <p class="pskill">* Programming Language : JavaScript/NodeJs</p>
+          <p class="pskill">* Technology: Amazon Web Service(AWS)</p>
+          <p class="pskill">* Technology: Apache Spark + Hadoop</p>
+          <p class="pskill">* Technology: Apache Airflow</p>
+          <p class="pskill">* Technology: Amazon EMR</p>
+          <p class="pskill">* Technology: Jenkins</p>
+          <p class="pskill">* Technology: Docker (Familiar)</p>
+        </div>
+      </div>
+    </div>
+    <div id="expModal" class="modal">
+      <div class="expModal-content">
+        <div class="expModal-body">
+          <h2 id="exph2">EXP</h2>
+          <p class="pexp">Senior Data Engineer @ Genesys</p>
+          <p class="pexp">Apr.21 - Now</p>
+          <p class="pexp">------</p>
+          <p class="pexp">Data Engineer @ Genesys</p>
+          <p class="pexp">Mar.20 - Apr.21</p>
+          <p class="pexp">------</p>
+          <p class="pexp">Software Developer @ Genesys</p>
+          <p class="pexp">Mar.19 - Apr.20</p>
+          <p class="pexp">------</p>
+          <p class="pexp">Associate Software Developer @ Genesys</p>
+          <p class="pexp">Jun.17 - Mar.19</p>
+        </div>
+      </div>
+    </div>
+    <div id="projModal" class="modal">
+      <div class="projModal-content">
+        <div class="projModal-body">
+          <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'C++')">C/C++</button>
+            <button class="tablinks" onclick="openTab(event, 'Java')">Java</button>
+            <button class="tablinks" onclick="openTab(event, 'Android')">Android</button>
+          </div>
+          <div id="C++" class="tabcontent">
+            <div id="zeldaImg" onClick="window.open('https://github.com/longslvr/zelda_openGL','_blank');"></div>
+            <div id="zeldaContent">
+              <p class="tiny">
+                <---- Program: OpenGL. </p>
+                  <p class="tiny">
+                    <---- Target: Unix/Linux. </p>
+                      <p class="tiny">
+                        <---- Desc: Interactive Scene. </p>
+            </div>
+            <div id="rayImg" onClick="window.open('https://github.com/longslvr/simplified_raytracing','_blank');"></div>
+            <div id="rayContent">
+              <p class="tiny">Target: Unix/Linux.--></p>
+              <p class="tiny">Desc: Raytracing.-----></p>
+            </div>
+            <div id="tetrisImg" onClick="window.open('https://github.com/longslvr/tetriscpp','_blank');"></div>
+            <div id="tetrisContent">
+              <p class="tiny">
+                <------ Target: Unix/Linux. </p>
+                  <p class="tiny">
+                    <------ Desc: Tetris Game. </p>
+                      <p class="tini">________________________</p>
+                      <p class="tini">. Click on image for source code.</p>
+                      <p class="tini">. Move character out to dismiss.</p>
+            </div>
+          </div>
+          <div id="Java" class="tabcontent">
+            <div id="boutImg" onClick="window.open('https://github.com/longslvr/brick_break','_blank');"></div>
+            <div id="boutContent">
+              <p class="tiny">
+                <------ Target: Unix/Linux. </p>
+                  <p class="tiny">
+                    <------ Desc: Brick Break Game. </p>
+            </div>
+            <div id="doodleImg" onClick="window.open('https://github.com/longslvr/doodlejava','_blank');"></div>
+            <div id="doodleContent">
+              <p class="tiny">Target: Unix/Linux.--></p>
+              <p class="tiny">Desc: Doodle Drawing.-----></p>
+              <p class="tini2">________________________</p>
+              <p class="tini2">. Click on image for source code.</p>
+              <p class="tini2">. Move character out to dismiss.</p>
+            </div>
+          </div>
+          <div id="Android" class="tabcontent">
+            <p>---------------------</p>
+            <p class="norm">Name: NoteBank</p>
+            <p id="desc">Desc:</p>
+            <p id="pers">Notesharing platform for University of Waterloo student.</p>
+            <p class="norm">Type: group of 4.</p>
+            <p>---------------------</p>
+            <a class="norm" href="https://github.com/longslvr/note_bank" target="_blank">Source Code</a>
+          </div>
+        </div>undefined undefined
+      </div>undefined undefined
+    </div>undefinedundefined<script type="text/javascript">
+      var submitted = false;
+    </script>undefinedundefined<div id="contactModal" class="modal">undefinedundefined<div class="contactModal-content">
+        <div class="contactModal-body">
+          <p id="contactme">Contact Me:</p>
+          <p id="fade"></p>
+          <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSfZDFraeE-YBUTNUxEqf_JwqaPnbtaQI1JLZqcoP3p2u4WxuA/formResponse" target="hidden_iframe" onsubmit="submitted=true;">Your name <br>
+            <input type="text" name="entry.28951094" id="entry.28951094">
+            <br>Your e-mail <br>
+            <input type="text" name="entry.1757323515" id="entry.1757323515">
+            <br>Message <br>
+            <textarea name="entry.213514423" id="entry.213514423"></textarea>
+            <br>
+            <input type="submit" value="Send">
+          </form>
+          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){}"></iframe>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      $('#gform').on('submit', function(e) {
+        $('#gform').fadeOut(500);
+        $('#fade').append('Your message has been sent...');
+        $('#fade').append('Move character out to dismiss!');
+      });
+    </script>
+    <script src='./js/modal.js'></script>
+  </body>
+</html>
